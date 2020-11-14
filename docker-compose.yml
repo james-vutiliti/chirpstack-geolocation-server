@@ -3,6 +3,6 @@ services:
   chirpstack-geolocation-server:
     build:
       context: .
-      dockerfile: Dockerfile-devel
+      dockerfile: Dockerfile
     volumes:
       - ./:/chirpstack-geolocation-server
