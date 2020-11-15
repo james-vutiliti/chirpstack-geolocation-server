@@ -19,4 +19,5 @@ FROM alpine:latest AS production
 WORKDIR /root/
 RUN apk --no-cache add ca-certificates tzdata
 COPY --from=development /chirpstack-geolocation-server/build/chirpstack-geolocation-server /usr/bin/chirpstack-geolocation-server
+COPY configuration/chirpstack-geolocation-server/chirpstack-geolocation-server.toml /etc/chirpstack-geolocation-server
 ENTRYPOINT ["/usr/bin/chirpstack-geolocation-server"]
